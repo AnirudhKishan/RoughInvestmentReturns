@@ -1,6 +1,6 @@
 from __future__ import division
 
-import math, numpy
+import math, numpy_financial
 
 invested = int(input("Invested: "))
 current = int(input("Current: "))
@@ -13,7 +13,7 @@ for i in range(months):
 
 values.append(current)
 
-irr_monthly = numpy.irr(values)
+irr_monthly = numpy_financial.irr(values)
 
 irr_annual = ((1 + irr_monthly) ** 12) - 1
 
